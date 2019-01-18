@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    {% load static%}
+  </head>
+  <body>
+    {%if student%}
+    <table border='2'>
+      <thead>
+        <th>NAME</th>
+        <th>NO</th>
+        <th>MARKS</th>
+      </thead>
+      {% for stu in student%}
+      <tr>
+        <td>{{stu.name}}</td>
+        <td>{{stu.no}}</td>
+        <td>{{stu.marks}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+     {% else %}
+     print('no table')
+    {% endif%}
+  </body>
+</html>
